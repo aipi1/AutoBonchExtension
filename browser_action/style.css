@@ -1,0 +1,82 @@
+body{
+	font-size: 16px;
+	margin: 0;
+	padding: 5px;
+	min-height: 180px;
+	width: 200px;
+	background-color: #3b372c;
+	color: #f5ab35;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+#login, #choose, #configured{
+	display: flex;
+	flex-direction: column;
+}
+
+#done{
+	color: green;
+	display: none;
+}
+
+#tryagain, #tryagain1{
+	color: red;
+	display: none;	
+}
+
+#button1{
+	margin-top: 10px;
+}
+
+#button4{
+	margin-top: 10px;
+}
+
+#button2, #button3{
+	margin-top: 5px;
+}
+
+p{
+	margin: 0;
+	text-align: center;	
+}
+
+h3, h2{
+	margin: 0;
+	text-align: center;
+}
+
+#choose{
+	display: none;
+}
+
+#configured{
+	margin-top: 20px;
+}
+
+input[type=password]:focus, input[type=text]:focus {
+    border: 2px solid #f5ab35;
+    border-radius: 3px;  
+}
+
+input[type=password], input[type=text]{
+    background-color: #5a4c38;
+    color: #f5ab35;
+    border: none;
+    outline: none;
+}
+
+input[type=button]{
+    background-color: #5a4c38;
+    color: #f5ab35;
+    border: none;
+    outline: none;
+}
+
+input[type=button]:hover{
+    background-color: #f5ab35;
+    color: #5a4c38;
+    border: none;
+    outline: none;
+}
+

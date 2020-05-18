@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="login">
+		<h3>AutoBonch</h3>
+
+		<p id="howto">Введите свои данные для входа в лк Бонча (lk.sut.ru/cabinet/) и нажмите "Далее"</p>
+		<p id="tryagain">Необходимо заполнить оба поля!</p>
+
+		<label>E-mail</label>
+		<input type="text" id="e">
+		<label>Пароль</label>
+		<input type="password" id="p">
+
+		<input id="button1" type=button value=Далее>
+	</div>
+	
+	<div id="choose">
+		<p id="howto1">Выберите на каких парах хотите отмечаться и нажмите "Готово"</p>
+		<p id="tryagain1">Необходимо выбрать хотя бы одну!</p>
+		<div id="schedule">
+			<input type="checkbox" id="p1" value="p1">
+			<label for="p1">9:00</label><br>
+			
+			<input type="checkbox" id="p2" value="p2">
+			<label for="p2">10:45</label><br>
+
+			<input type="checkbox" id="p3" value="p3">
+			<label for="p3">13:00</label><br>
+
+			<input type="checkbox" id="p4" value="p4">
+			<label for="p4">14:45</label><br>
+
+			<input type="checkbox" id="p5" value="p5">
+			<label for="p5">16:30</label><br>
+
+			<input type="checkbox" id="p6" value="p6">
+			<label for="p6">18:05</label><br>
+		</div>
+		<input id="button2" type=button value=Готово>
+		<input id="button3" type=button value=Назад>
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>

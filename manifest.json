@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "AutoBonch",
+  "permissions": [
+    "alarms",
+    "https://lk.sut.ru/cabinet/*"
+  ],
+  "version": "1.0.0",
+  "description": "Автоматически отмечает присутсвие на парах Бонча",
+  "browser_action": {
+    "default_title": "AutoBonch",
+    "default_popup": "browser_action/popup.html",
+    "default_icon": {
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lk.sut.ru/cabinet/*"],
+      "js": ["content_scripts/script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background_script/background.js"]
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
