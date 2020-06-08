@@ -34,8 +34,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   
 	if(request.p1){
 		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
-		const h = 16;
-		const m = 51;
+		const h = 9;
+		const m = 0;
 		let today = new Date();
 		const timeNow = today.getTime();
 		today.setHours(h);
@@ -50,8 +50,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 	}
 	if(request.p2){
 		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
-		const h = 16;
-		const m = 52;
+		const h = 10;
+		const m = 45;
 		let today = new Date();
 		const timeNow = today.getTime();
 		today.setHours(h);
