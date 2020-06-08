@@ -9,10 +9,11 @@ chrome.browserAction.setIcon({path: {"32": "../icons/icon32.png"}});
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 	if(request.stop){
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32.png"}});
 		refreshCount = 0;
     	chrome.alarms.clearAll();
-    	tabID = "";
-    	tabID1 = "";
+    	tabID = null;
+    	tabID1 = null;
 	}
 
 	if(request.e && request.p){
@@ -32,8 +33,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     }
   
 	if(request.p1){
-		const h = 9;
-		const m = 0;
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
+		const h = 16;
+		const m = 51;
 		let today = new Date();
 		const timeNow = today.getTime();
 		today.setHours(h);
@@ -47,8 +49,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.alarms.create("p1_alarm", {when: time, periodInMinutes: (60*24)});
 	}
 	if(request.p2){
-		const h = 10;
-		const m = 45;
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
+		const h = 16;
+		const m = 52;
 		let today = new Date();
 		const timeNow = today.getTime();
 		today.setHours(h);
@@ -62,6 +65,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.alarms.create("p2_alarm", {when: time, periodInMinutes: (60*24)});
 	}
 	if(request.p3){
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
 		const h = 13;
 		const m = 0;
 		let today = new Date();
@@ -77,6 +81,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.alarms.create("p3_alarm", {when: time, periodInMinutes: (60*24)});		
 	}
 	if(request.p4){
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
 		const h = 14;
 		const m = 45;
 		let today = new Date();
@@ -92,6 +97,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.alarms.create("p4_alarm", {when: time, periodInMinutes: (60*24)});		
 	}
 	if(request.p5){
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
 		const h = 16;
 		const m = 30;
 		let today = new Date();
@@ -107,6 +113,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.alarms.create("p5_alarm", {when: time, periodInMinutes: (60*24)});		
 	}
 	if(request.p6){
+		chrome.browserAction.setIcon({path: {"32": "../icons/icon32ON.png"}});
 		const h = 18;
 		const m = 5;
 		let today = new Date();
@@ -152,7 +159,7 @@ chrome.tabs.onRemoved.addListener(function(tabId, removeInfo){
 	if(tabId === tabID1){
     	refreshCount = 0;
     	chrome.alarms.clear("waitNClick");
-    	tabID = "";
-    	tabID1 = "";
+    	tabID = null;
+    	tabID1 = null;
 	}
 });

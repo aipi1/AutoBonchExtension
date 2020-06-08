@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    chrome.browserAction.setIcon({path: {"32": "../icons/icon32.png"}});
     document.getElementById("button1").addEventListener("click", login);
     document.getElementById("button2").addEventListener("click", start);
     document.getElementById("button3").addEventListener("click", back);
